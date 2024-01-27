@@ -16,6 +16,7 @@ $(function () {
   // useful when saving the description in local storage?
   //
 
+  $(".description").text;
   
 // For loop to see if events are in the past, present, or future.//
   for (var i = 0; i < $(".hour").length; i++) {
