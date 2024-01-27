@@ -1,3 +1,6 @@
+console.log($("#hour-11").text());
+console.log($("#hour-11").children().text());
+
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
@@ -16,7 +19,9 @@ $(function () {
   var saveButtons = $(".saveBtn")
   saveButtons.each(function (event) {
     $(this).on("click", function () {
-      console.log("Works!" + (event + 1));
+      console.log(this.previousSibling);
+
+      // console.log("Works!" + (event + 1));
     })
   });
 
@@ -28,7 +33,7 @@ $(function () {
   for (var i = userDefinedStart; i < $(".hour").length + userDefinedStart; i++) {
     var hourNum = "#hour-" + i;
     // If the text in the left column of the calendar is equal to the time in a "hA" format, set class to present.//
-    if ($(hourNum + " .hour").text() === hour12) {
+    if (($(hourNum).children().eq(0).text()) === hour12) {
       $(hourNum).attr("class", "row time-block present")
       //  If the "i" value from the loop is less than the current hour, set the class to "past".//
     } else if (i < hour24) {
