@@ -1,99 +1,36 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler (Module-5-Challenge)
 
-## Your Task
+## Description 
+Deployed site: https://jheersink8.github.io/module-5-challenge/ 
 
-Create a simple calendar application that allows a user to save events for each hour of a typical working day (9am&ndash;5pm) by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+When I approached this project, I tried to envision that a client had commissioned me to build this site and implement their user story. With that approach in mind, I was able to not just build the minimum requested content, but I also thought through some potential problems the client may have missed as well as compiling a list of things they should think through for future development. I’ll highlight some of the specific additions below, but my biggest takeaway with this project was how I could ask the question, “what is the client not thinking about?” With that approach, I believe I was able to deliver a good product for them. Some of the technical things I learned through this project include (but are not limited to): 
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+- Integrating time (dayJS) with logic functions
+- Utilizing shortcuts that come with jQuery
+- Building HTML content that the user will see entirely from JavaScript
+- Making the entire script page dynamic to react to a few variables 
+- Navigating the DOM with jQuery syntax 
 
-## User Story
+## Usage
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+The functionality matches all the client’s requested features. The date is displayed at the top of the page. They can click any text area, add content, and save it by clicking the button. When they reload the page, the content will persist. Also, the colors of the cells reflect the past (grey blocks), the present (red blocks), and the future (green blocks). Below is a screenshot of what the scheduler looks like. 
+In addition to the minimum features listed above, I added some additional features to provide a stronger experience for the end users: 
 
-## Acceptance Criteria
+-	The display of content for the end user is highly dynamic. By this, I mean that if the end user wanted to add times outside of their set boundaries of 9:00AM – 5:00PM, they can easily do that. The first two lines of JS code represent the start time for the scheduler and the end time represents the end time for the scheduler. The end user would just need to change these parameters to add/subtract time slots. And the reset of the page is dynamic enough to react to these two changed variables; no other content needs to be changed by the end user. 
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours of 9am&ndash;5pm
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+-	Any event that is tagged with a past color code of grey will be changed to read only. This way, the users will have a protected/unaltered history as they move throughout the day. 
 
-The following animation demonstrates the application functionality:
+Some other considerations that the end user may want in future requests: 
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+-	Request to have the page automatically change the highlighted text areas automatically at the top of each hour. Since this wasn’t a direct request from the end user and not 100% necessary for a good experience, I (the developer) did not add it. 
 
-## Grading Requirements
+-	Similarly, it may be a good idea to add the ability to clear all local saved content at 11:59PM each night so that the schedule is blank and ready to use the next day. 
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
 
-This Challenge is graded based on the following criteria:
+![A screenshot of the scheduler being used between the hour of 11:00AM and 11:59AM.](./Assets/module-5-challenge-screenshot.png)
 
-### Technical Acceptance Criteria: 40%
+## Credits
+The original scenario was presented by Denver University in the Bootcamp course ID DU-VIRT-FSF-PT-12-2023-U-LOLC-MWTH under Module 5 Challenge. The starter HTML and CSS code was presented by DU and all remaining code was generated and submitted by Jordan R. Heersink.
 
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses a date utility library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## License 
+MIT License Copyright (c) 2024 Jordan Heersink Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
