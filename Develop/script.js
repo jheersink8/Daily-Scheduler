@@ -4,15 +4,17 @@
 
 
 $(function () {
-  // -----------------------------SAVE BUTTON-----------------------------//
+  // -----------------------------SAVE BUTTONS-----------------------------//
   // Use "for each" with "this" to determine which queried button has been clicked.//
   var saveButtons = $(".saveBtn")
+
   saveButtons.each(function () {
     $(this).on("click", function () {
       // Define variables for clicked "div ID" and "text content". Saves those values to local storage with the "div ID" (var = hourID) as the key and the "text content" (var = meetingText) as the saved value.//
       var hourID = ($(this).closest("div").attr("id"));
       var meetingText = ($(this).prev("textarea").val());
       localStorage.setItem(hourID, meetingText);
+      load();
     })
   });
 
@@ -35,18 +37,20 @@ $(function () {
     }
   };
 
+  // -----------------------------LOAD DATA-----------------------------//
+  // Look through each key item in local storage and fill it in textarea.//
+  function load() {
+    for (var j = 0; j < $(".hour").length + userDefinedStart; j++) {
+      var hourNum = "#hour-" + j;
+      var key = "hour-" + j;
+      $(hourNum).children().eq(1).val(localStorage.getItem(key));
+    }
+  };
+  load();
 
-
-
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-
+  // -----------------------------DISPLAY HEADER DATE-----------------------------//
   // Sets the current time in the header of the page.//
   var currentDay = $("#currentDay");
   var today = dayjs().format("dddd, MMMM D");
   currentDay.text(today);
 });
-
