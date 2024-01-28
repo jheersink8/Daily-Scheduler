@@ -27,7 +27,7 @@ Some other considerations that the end user may want in future requests:
 -	Similarly, it may be a good idea to add the ability to clear all local saved content at 11:59PM each night so that the schedule is blank and ready to use the next day. 
 
 
-![A screenshot of the scheduler being used between the hour of 11:00AM and 11:59AM.](./Assets/module-5-challenge-screenshot.png)
+![A screenshot of the scheduler being used between the hour of 11:00AM and 11:59AM.](./Assets/images/module-5-challenge-screenshot.png)
 
 ## Credits
 The original scenario was presented by Denver University in the Bootcamp course ID DU-VIRT-FSF-PT-12-2023-U-LOLC-MWTH under Module 5 Challenge. The starter HTML and CSS code was presented by DU and all remaining code was generated and submitted by Jordan R. Heersink.
