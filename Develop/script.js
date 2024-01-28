@@ -1,7 +1,3 @@
-console.log($("#hour-11").text());
-console.log($("#hour-11").children().text());
-
-
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
@@ -14,14 +10,14 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  //
+  
+
   // -----------------------------SAVE BUTTON-----------------------------//
   var saveButtons = $(".saveBtn")
-  saveButtons.each(function (event) {
+  saveButtons.each(function () {
     $(this).on("click", function () {
-      console.log(this.previousSibling);
-
-      // console.log("Works!" + (event + 1));
+      console.log($(this).closest("div").attr("id"));
+      console.log($(this).prev("textarea").val());
     })
   });
 
