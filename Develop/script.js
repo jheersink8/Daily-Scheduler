@@ -2,7 +2,7 @@ $(function () {
   // If the user ever wants to change the parameters of the scheduler outside 9-5 hours, they just need to change the values here. The rest of the code in the page will dynamically react to these two values and no other code needs to be changed. The start MUST be less than or equal to the end, and both values need to be between 0 (for 12:00AM) and 23 (for 11:00PM).//
   var userDefinedStart = 9;
   var userDefinedEnd = 16;
-  
+
   // -----------------------------CREATE PAGE-----------------------------//
   //  This code will generate the display for the user based on the userDefinedStart and userDefinedEnd values above.//
   for (var i = userDefinedStart; i < userDefinedEnd + 1; i++) {
@@ -39,9 +39,10 @@ $(function () {
     // If the text in the left column of the calendar is equal to the time in a "hA" format, set class to present.//
     if (($(hourNum).children().eq(0).text()) === hour12) {
       $(hourNum).attr("class", "row time-block present")
-      //  If the "i" value from the loop is less than the current hour, set the class to "past".//
+      //  If the "i" value from the loop is less than the current hour, set the class to "past". Also, past events cannot be edited.//
     } else if (i < hour24) {
-      $(hourNum).attr("class", "row time-block past")
+      $(hourNum).attr("class", "row time-block past"),
+      $(hourNum).children().eq(1).prop("readonly", true);
       //  If the "i" value from the loop is greater than the current hour, set the class to "future".//
     } else {
       $(hourNum).attr("class", "row time-block future")
