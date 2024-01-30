@@ -1,7 +1,7 @@
 # Work Day Scheduler (Module-5-Challenge)
 
 ## Description 
-Deployed site: https://jheersink8.github.io/module-5-challenge/ 
+Deployed site: https://jheersink8.github.io/Daily-Scheduler
 
 When I approached this project, I tried to envision that a client had commissioned me to build this site and implement their user story. With that approach in mind, I was able to not just build the minimum requested content, but I also thought through some potential problems the client may have missed as well as compiling a list of things they should think through for future development. I’ll highlight some of the specific additions below, but my biggest takeaway with this project was how I could ask the question, “what is the client not thinking about?” With that approach, I believe I was able to deliver a good product for them. Some of the technical things I learned through this project include (but are not limited to): 
 
