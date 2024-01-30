@@ -1,7 +1,7 @@
 $(function () {
   // If the user ever wants to change the parameters of the scheduler outside 9-5 hours, they just need to change the values here. The rest of the code in the page will dynamically react to these two values and no other code needs to be changed. The start MUST be less than or equal to the end, and both values need to be between 0 (for 12:00AM) and 23 (for 11:00PM).//
   var userDefinedStart = 9;
-  var userDefinedEnd = 16;
+  var userDefinedEnd = 17;
 
   // -----------------------------CREATE PAGE-----------------------------//
   //  This code will generate the display for the user based on the userDefinedStart and userDefinedEnd values above.//
