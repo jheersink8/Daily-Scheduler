@@ -1,4 +1,4 @@
-# Work Day Scheduler (Module-5-Challenge)
+# Daily Scheduler (Module-5-Challenge)
 
 ## Description 
 Deployed site: https://jheersink8.github.io/Daily-Scheduler
